@@ -5880,11 +5880,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator.Tests\\Calculator.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator.Tests\\Calculator.Tests.csproj",
       "projectName": "Calculator.Tests",
-      "projectPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator.Tests\\Calculator.Tests.csproj",
+      "projectPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator.Tests\\Calculator.Tests.csproj",
       "packagesPath": "C:\\Users\\Kiddo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5903,8 +5903,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator\\Calculator.csproj": {
-              "projectPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator\\Calculator.csproj"
+            "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator\\Calculator.csproj": {
+              "projectPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator\\Calculator.csproj"
             }
           }
         }

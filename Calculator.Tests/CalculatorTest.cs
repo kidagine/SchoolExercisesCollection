@@ -65,9 +65,9 @@ namespace Calculator.Tests
         //Subtraction
         [Theory]
         [InlineData(5, 0, 5)]
-        [InlineData(0, int.MaxValue, int.MaxValue)]
+        [InlineData(0, int.MaxValue, int.MinValue + 1)]
         [InlineData(0, int.MinValue, int.MinValue)]
-        [InlineData(-1, int.MaxValue - 1, int.MaxValue)]
+        [InlineData(-1, int.MaxValue - 1, int.MinValue + 1)]
         [InlineData(1, int.MinValue + 1, int.MinValue)]
         public void SubtractValidInput(int initial, int x, int expected)
         {
@@ -104,6 +104,31 @@ namespace Calculator.Tests
         }
 
         //Multiply
+        [Theory]
+        [InlineData(5, 1, 5)]
+        [InlineData(0, int.MaxValue, 0)]
+        [InlineData(0, int.MinValue, 0)]
+        [InlineData(1, int.MaxValue, int.MaxValue)]
+        [InlineData(1, int.MinValue, int.MinValue)]
+        public void MultiplyValidInput(int initial, int x, int expected)
+        {
+            ICalculator calculator = new Calculator();
+            calculator.Add(initial);
+            calculator.Multiply(x);
+            Assert.Equal(expected, calculator.Result);
+        }
+
+        [Fact]
+        public void MultiplyOverflowException()
+        {
+            ICalculator calculator = new Calculator();
+            calculator.Add(5);
+            var e = Assert.Throws<OverflowException>(() =>
+            {
+                calculator.Multiply(int.MaxValue);
+            });
+            Assert.True(e.Message == "Overflow by multiplication");
+        }
 
         //Division
         [Theory]
@@ -112,26 +137,51 @@ namespace Calculator.Tests
         [InlineData(0, int.MinValue, 0)]
         [InlineData(1, int.MaxValue, 0)]
         [InlineData(1, int.MinValue, 0)]
-        public void Divide_Valid_Input(int initial, int x, int expected)
+        public void DivideValidInput(int initial, int x, int expected)
         {
-            ICalculator c = new Calculator();
-            c.Add(initial);
-            c.Divide(x);
-            Assert.Equal(expected, c.Result);
+            ICalculator calculator = new Calculator();
+            calculator.Add(initial);
+            calculator.Divide(x);
+            Assert.Equal(expected, calculator.Result);
         }
 
         [Fact]
-        public void Divide_DivideByZero_Exception()
+        public void DivideDivideByZeroException()
         {
-            ICalculator c = new Calculator();
-            c.Add(5);
+            ICalculator calculator = new Calculator();
+            calculator.Add(5);
             var e = Assert.Throws<DivideByZeroException>(() =>
             {
-                c.Divide(0);
+                calculator.Divide(0);
             });
             Assert.True(e.Message == "Zero division by division.");
         }
 
         //Modulus
+        [Theory]
+        [InlineData(5, 1, 0)]
+        [InlineData(0, int.MaxValue, 0)]
+        [InlineData(0, int.MinValue, 0)]
+        [InlineData(1, int.MaxValue, 1)]
+        [InlineData(1, int.MinValue, 1)]
+        public void ModulusValidInput(int initial, int x, int expected)
+        {
+            ICalculator calculator = new Calculator();
+            calculator.Add(initial);
+            calculator.Modulus(x);
+            Assert.Equal(expected, calculator.Result);
+        }
+
+        [Fact]
+        public void ModulusDivideByZeroException()
+        {
+            ICalculator calculator = new Calculator();
+            calculator.Add(5);
+            var e = Assert.Throws<DivideByZeroException>(() =>
+            {
+                calculator.Modulus(0);
+            });
+            Assert.True(e.Message == "Zero division by modulus.");
+        }
     }
 }

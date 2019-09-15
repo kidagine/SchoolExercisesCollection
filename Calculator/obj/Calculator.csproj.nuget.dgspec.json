@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator\\Calculator.csproj": {}
+    "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator\\Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator\\Calculator.csproj": {
+    "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator\\Calculator.csproj",
+        "projectPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator\\Calculator.csproj",
         "packagesPath": "C:\\Users\\Kiddo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\School\\Projects\\Calculator\\Calculator\\obj\\",
+        "outputPath": "C:\\Users\\Kiddo\\Desktop\\Code\\C#\\SchoolProjects\\Projects\\Calculator\\CalculatorUnitTesting\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

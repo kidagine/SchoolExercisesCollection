@@ -31,7 +31,13 @@ namespace Calculator
 
         public void Multiply(int x)
         {
-            throw new NotImplementedException();
+            int tempResult =  x * Result;
+            if (tempResult != 0)
+            {
+                if (x != tempResult / Result)
+                    throw new OverflowException("Overflow by multiplication");
+            }
+            Result = checked(Result * x);
         }
 
         public void Divide(int x)
@@ -43,7 +49,9 @@ namespace Calculator
 
         public void Modulus(int x)
         {
-            throw new NotImplementedException();
+            if (x == 0)
+                throw new DivideByZeroException("Zero division by modulus.");
+            Result %= x;
         }
     }
 }
