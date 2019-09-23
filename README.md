@@ -1,3 +1,3 @@
-# CalculatorUnitTesting
+# SchoolExercisesCollection
 
-A small school exercise for using unit testing in VS.
+This acts as a repository for uploading all the small exercises made for school.
