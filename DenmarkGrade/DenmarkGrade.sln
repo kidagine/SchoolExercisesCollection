@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenmarkGrade.Core", "DenmarkGrade.Core\DenmarkGrade.Core.csproj", "{B82A7C1D-113D-4BF6-ADAA-8D658754F561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenmarkGrade.Tests", "DenmarkGrade.Tests\DenmarkGrade.Tests.csproj", "{66B3C8BA-39B2-4B13-A947-360C3CF407A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B82A7C1D-113D-4BF6-ADAA-8D658754F561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82A7C1D-113D-4BF6-ADAA-8D658754F561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82A7C1D-113D-4BF6-ADAA-8D658754F561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82A7C1D-113D-4BF6-ADAA-8D658754F561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B3C8BA-39B2-4B13-A947-360C3CF407A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B3C8BA-39B2-4B13-A947-360C3CF407A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B3C8BA-39B2-4B13-A947-360C3CF407A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B3C8BA-39B2-4B13-A947-360C3CF407A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F313925-FD1E-4E2B-83ED-B1EBC9CED8D2}
+	EndGlobalSection
+EndGlobal
