@@ -12,37 +12,8 @@ namespace MovieRatings.Infrastructure.Data
         //const string filePath = @"..\..\..\..\ratings.json";
         //JsonSerializer js = new JsonSerializer();
         //(MovieRating[]) js.Deserialize(sr, typeof(MovieRating[]));
-        public double AverageRatingByReviewer(int reviewer)
-        {
-            throw new NotImplementedException();
-        }
-
-        public double AverageRatingOnMovie(int movie)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetCountOfGradesByReviewer(int reviewer, int grade)
-        {
-            throw new NotImplementedException();
-        }
 
         public int GetCountOfMovieReviews(int movie)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int GetCountOfMovieByGrade(int movie, int grade)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<MovieRating> GetMoviesByReviewer(int reviewer)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<MovieRating> GetReviewersByMovie(int movie)
         {
             throw new NotImplementedException();
         }
@@ -53,17 +24,45 @@ namespace MovieRatings.Infrastructure.Data
             return count;
         }
 
-        public List<int> GetTopGradedMovies()
+        public int GetCountOfMovieByGrade(int movie, int grade)
         {
             throw new NotImplementedException();
         }
 
-        public List<MovieRating> GetTopMovies(int number)
+        public int GetCountOfGradesByReviewer(int reviewer, int grade)
         {
             throw new NotImplementedException();
         }
 
-        public List<int> GetTopReviewers()
+        public double AverageRatingByReviewer(int reviewer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public double AverageRatingOnMovie(int movie)
+        {
+            throw new NotImplementedException();
+        }
+        public IEnumerable<int> GetTopReviewers()
+        {
+            throw new NotImplementedException();
+        }
+        public IEnumerable<int> GetTopGradedMovies()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<MovieRating> GetMoviesByReviewer(int reviewer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<MovieRating> GetReviewersByMovie(int movie)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<MovieRating> GetTopMovies(int number)
         {
             throw new NotImplementedException();
         }

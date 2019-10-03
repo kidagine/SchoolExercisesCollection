@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MovieRatings.Core.Entity
 {
     public class MovieRating
     {
         private int _reviewer;
+        private int _movie;
+        private int _grade;
+
+
         public int Reviewer 
         {
             get 
@@ -15,12 +17,35 @@ namespace MovieRatings.Core.Entity
             }
             private set 
             {
-                if (value <= 0) throw new ArgumentException("Invalid reviewer id!!!!!!!!!!!!");
+                if (value < 1) throw new ArgumentException("The reviewer cannot be a negative number");
                 _reviewer = value;
             } 
         }
-        public int Movie { get; private set; }
-        public int Grade { get; private set; }
+        public int Movie
+        {
+            get
+            {
+                return _movie;
+            }
+            private set
+            {
+                if (value < 1) throw new ArgumentException("The movie cannot be a negative number");
+                _movie = value;
+            }
+        }
+        public int Grade
+        {
+            get
+            {
+                return _grade;
+            }
+            private set
+            {
+                if (!(value > 0 && value < 6)) throw new ArgumentException("The grade has to be between 1-5");
+                _grade = value;
+            }
+        }
+
         public DateTime Date { get; private set; }
 
         public MovieRating(int reviewer, int movie, int grade, DateTime date)

@@ -1,7 +1,5 @@
 ﻿using MovieRatings.Core.Entity;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MovieRatings.Core.DomainService
 {

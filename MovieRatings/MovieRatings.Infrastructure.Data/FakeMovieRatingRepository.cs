@@ -9,7 +9,8 @@ namespace MovieRatings.Infrastructure.Data
 {
     public class FakeMovieRatingRepository : IMovieRatingRepository
     {
-        List<MovieRating> movieRatings = new List<MovieRating>();
+        readonly private List<MovieRating> movieRatings = new List<MovieRating>();
+
 
         public void Add(MovieRating movieRating)
         {
@@ -49,7 +50,7 @@ namespace MovieRatings.Infrastructure.Data
         public IEnumerable<int> GetTopGradedMovies()
         {
             return movieRatings.OrderByDescending(mr => mr.Grade).Select(mr => mr.Movie).Distinct().Take(5);
-        }
+        }    
 
         public IEnumerable<int> GetTopReviewers()
         {
@@ -58,17 +59,17 @@ namespace MovieRatings.Infrastructure.Data
 
         public IEnumerable<MovieRating> GetTopMovies(int number)
         {
-            //return movieRatings.Distinct().Count() == 1;//Take(number);Average()
+            throw new NotImplementedException();
         }
 
         public IEnumerable<MovieRating> GetMoviesByReviewer(int reviewer)
         {
-            throw new NotImplementedException();
+            return movieRatings.Where(mr => mr.Reviewer == reviewer).OrderByDescending(mr => mr.Grade).ThenByDescending(mr => mr.Date);
         }
 
         public IEnumerable<MovieRating> GetReviewersByMovie(int movie)
         {
-            throw new NotImplementedException();
+            return movieRatings.Where(mr => mr.Movie == movie).OrderByDescending(mr => mr.Grade).ThenByDescending(mr => mr.Date);
         }
     }   
 }
