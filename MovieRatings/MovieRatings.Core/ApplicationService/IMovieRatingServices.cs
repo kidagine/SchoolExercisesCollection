@@ -13,7 +13,7 @@ namespace MovieRatings.Core.ApplicationService
         int GetCountOfMovieByGrade(int movie, int grade);
         List<int> GetTopGradedMovies();
         List<int> GetTopReviewers();
-        List<MovieRating> GetTopMovies(int number);
+        List<int> GetTopMovies(int number);
         List<MovieRating> GetMoviesByReviewer(int reviewer);
         List<MovieRating> GetReviewersByMovie(int movie);
     }

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using MovieRatings.Core.DomainService;
 using MovieRatings.Core.Entity;
-using Newtonsoft.Json;
+using MovieRatings.Core.DomainService;
 
 namespace MovieRatings.Infrastructure.Data
 {
@@ -13,6 +11,11 @@ namespace MovieRatings.Infrastructure.Data
         //JsonSerializer js = new JsonSerializer();
         //(MovieRating[]) js.Deserialize(sr, typeof(MovieRating[]));
 
+        public void Add(MovieRating movieRating)
+        {
+            throw new NotImplementedException();
+        }
+
         public int GetCountOfMovieReviews(int movie)
         {
             throw new NotImplementedException();
@@ -20,8 +23,7 @@ namespace MovieRatings.Infrastructure.Data
 
         public int GetReviewsByReviewer(int reviewer)
         {
-            int count = 0;
-            return count;
+            throw new NotImplementedException();
         }
 
         public int GetCountOfMovieByGrade(int movie, int grade)
@@ -43,11 +45,18 @@ namespace MovieRatings.Infrastructure.Data
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<int> GetTopGradedMovies()
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<int> GetTopReviewers()
         {
             throw new NotImplementedException();
         }
-        public IEnumerable<int> GetTopGradedMovies()
+
+        public IEnumerable<int> GetTopMovies(int number)
         {
             throw new NotImplementedException();
         }
@@ -58,11 +67,6 @@ namespace MovieRatings.Infrastructure.Data
         }
 
         public IEnumerable<MovieRating> GetReviewersByMovie(int movie)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<MovieRating> GetTopMovies(int number)
         {
             throw new NotImplementedException();
         }

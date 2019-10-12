@@ -6,11 +6,11 @@ using MovieRatings.Core.DomainService;
 
 namespace MovieRatings.Core.ApplicationService.Services
 {
-    public class MovieRatingServices : IMovieRatingServices
+    public class MovieRatingService : IMovieRatingService
     {
         private readonly IMovieRatingRepository _movieRatingRepository;
 
-        public MovieRatingServices(IMovieRatingRepository movieRatingRepository)
+        public MovieRatingService(IMovieRatingRepository movieRatingRepository)
         {
             _movieRatingRepository = movieRatingRepository;
         }

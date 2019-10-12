@@ -1,9 +1,9 @@
 ﻿using MovieRatings.Core.Entity;
 using System.Collections.Generic;
 
-namespace MovieRatings.Core.DomainService
+namespace MovieRatings.Core.ApplicationService
 {
-    public interface IMovieRatingRepository
+    public interface IMovieRatingService
     {
         int GetReviewsByReviewer(int reviewer);
         double AverageRatingByReviewer(int reviewer);
@@ -11,10 +11,10 @@ namespace MovieRatings.Core.DomainService
         int GetCountOfMovieReviews(int movie);
         double AverageRatingOnMovie(int movie);
         int GetCountOfMovieByGrade(int movie, int grade);
-        IEnumerable<int> GetTopGradedMovies();
-        IEnumerable<int> GetTopReviewers();
-        IEnumerable<int> GetTopMovies(int number);
-        IEnumerable<MovieRating> GetMoviesByReviewer(int reviewer);
-        IEnumerable<MovieRating> GetReviewersByMovie(int movie);
+        List<int> GetTopGradedMovies();
+        List<int> GetTopReviewers();
+        List<int> GetTopMovies(int number);
+        List<MovieRating> GetMoviesByReviewer(int reviewer);
+        List<MovieRating> GetReviewersByMovie(int movie);
     }
 }
