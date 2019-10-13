@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using Xunit;
 using MovieRatings.Core.Entity;
-using MovieRatings.Infrastructure.Data;
+using MovieRatings.Tests.FakeRepositories;
 using MovieRatings.Core.ApplicationService;
 using MovieRatings.Core.ApplicationService.Services;
 
 namespace MovieRatings.Tests
 {
-    public class MovieRatingServicesTest
+    public class MovieRatingTest
     {
         [Theory]
         [InlineData(3, 0)]
@@ -183,7 +183,7 @@ namespace MovieRatings.Tests
         [InlineData(1, 1, 0)]
         [InlineData(2, 2, 1)]
         [InlineData(3, 3, 3)]
-        public void GetCountOfMoviesByGrade_TwoValidNumbers_ReturnsAmountOfMoviesOfGrade(int movie, int grade, int count)
+        public void GetCountOfMovieByGrade_TwoValidNumbers_ReturnsAmountOfMoviesOfGrade(int movie, int grade, int count)
         {
             FakeMovieRatingRepository movieRatingRepository = new FakeMovieRatingRepository();
             movieRatingRepository.Add(new MovieRating(2, 2, 2, DateTime.Now));
