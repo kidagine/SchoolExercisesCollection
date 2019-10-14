@@ -8,12 +8,11 @@ namespace MovieRatings.Infrastructure.Data.Repositories
 {
     public class MovieRatingRepository : IMovieRatingRepository
     {
-		private List<MovieRating> _movieRatings = new List<MovieRating>();
+		private readonly List<MovieRating> _movieRatings = new List<MovieRating>();
 
 
-		public MovieRatingRepository()
+		public MovieRatingRepository(JsonReader jsonReader)
 		{
-			JsonReader jsonReader = new JsonReader();
 			_movieRatings = jsonReader.GetData().ToList();
 		}
 
@@ -22,7 +21,7 @@ namespace MovieRatings.Infrastructure.Data.Repositories
 			return _movieRatings.Where(mr => mr.Movie == movie).Count();
 		}
 
-		public int GetReviewsByReviewer(int reviewer)
+		public int GetCountOfReviewsByReviewer(int reviewer)
 		{
 			return _movieRatings.Where(mr => mr.Reviewer == reviewer).Count();
 		}
@@ -59,7 +58,7 @@ namespace MovieRatings.Infrastructure.Data.Repositories
 
 		public IEnumerable<int> GetTopMovies(int number)
 		{
-			return _movieRatings.OrderByDescending(mr => AverageRatingOnMovie(mr.Grade)).Select(mr => mr.Movie).Distinct().Take(number);
+			return _movieRatings.OrderByDescending(mr => mr.Grade).Select(mr => mr.Movie).Distinct().Take(number);
 		}
 
 		public IEnumerable<MovieRating> GetMoviesByReviewer(int reviewer)

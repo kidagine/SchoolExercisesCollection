@@ -14,7 +14,7 @@ namespace MovieRatings.Tests
         [InlineData(3, 0)]
         [InlineData(1, 1)]
         [InlineData(2, 3)]
-        public void GetReviewsByReviewer_ValidNumber_ReturnsReviewsOfReviewer(int reviewer, int reviews)
+        public void GetCountOfReviewsByReviewer_ValidNumber_ReturnsReviewsOfReviewer(int reviewer, int reviews)
         {
             FakeMovieRatingRepository movieRatingRepository = new FakeMovieRatingRepository();
             movieRatingRepository.Add(new MovieRating(1, 3, 2, DateTime.Now));
@@ -23,18 +23,18 @@ namespace MovieRatings.Tests
             movieRatingRepository.Add(new MovieRating(2, 3, 2, DateTime.Now));
             IMovieRatingService movieRatingService = new MovieRatingService(movieRatingRepository);
 
-            int actual = movieRatingService.GetReviewsByReviewer(reviewer);
+            int actual = movieRatingService.GetCountOfReviewsByReviewer(reviewer);
 
             Assert.Equal(reviews, actual);
         }
 
         [Fact]
-        public void GetReviewsByReviewer_InvalidNumber_ThrowsArguementException()
+        public void GetCountOfReviewsByReviewer_InvalidNumber_ThrowsArguementException()
         {
             FakeMovieRatingRepository movieRatingRepository = new FakeMovieRatingRepository();
             IMovieRatingService movieRatingService = new MovieRatingService(movieRatingRepository);
 
-            Action actual = () => movieRatingService.GetReviewsByReviewer(-1);
+            Action actual = () => movieRatingService.GetCountOfReviewsByReviewer(-1);
 
             Assert.Throws<ArgumentException>(actual);
         }
@@ -200,7 +200,7 @@ namespace MovieRatings.Tests
         [Theory]
         [InlineData(4, 0)]
         [InlineData(5, 6)]
-        public void GetCountOfMoviesByGrade_TwoInvalidNumbers_ThrowsArguementException(int movie, int grade)
+        public void GetCountOfMovieByGrade_TwoInvalidNumbers_ThrowsArguementException(int movie, int grade)
         {
             FakeMovieRatingRepository movieRatingRepository = new FakeMovieRatingRepository();
             movieRatingRepository.Add(new MovieRating(2, 2, 2, DateTime.Now));

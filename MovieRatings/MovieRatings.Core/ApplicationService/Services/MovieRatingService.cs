@@ -10,6 +10,7 @@ namespace MovieRatings.Core.ApplicationService.Services
     {
         private readonly IMovieRatingRepository _movieRatingRepository;
 
+
         public MovieRatingService(IMovieRatingRepository movieRatingRepository)
         {
             _movieRatingRepository = movieRatingRepository;
@@ -24,13 +25,13 @@ namespace MovieRatings.Core.ApplicationService.Services
             return _movieRatingRepository.GetCountOfMovieReviews(movie);
         }
 
-        public int GetReviewsByReviewer(int reviewer)
+        public int GetCountOfReviewsByReviewer(int reviewer)
         {
             if (reviewer < 1)
             {
                 throw new ArgumentException("The reviewer cannot be a negative number");
             }
-            return _movieRatingRepository.GetReviewsByReviewer(reviewer);
+            return _movieRatingRepository.GetCountOfReviewsByReviewer(reviewer);
         }
 
         public int GetCountOfMovieByGrade(int movie, int grade)

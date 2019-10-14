@@ -1,22 +1,14 @@
-﻿using MovieRatings.Core.Entity;
-using Newtonsoft.Json;
-using System;
+﻿using System.IO;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Text;
+using Newtonsoft.Json;
+using MovieRatings.Core.Entity;
 
 namespace MovieRatings.Infrastructure.Data
 {
 	public class JsonReader
 	{
 		private const string filePath = @"..\..\..\..\ratings.json";
-		private IEnumerable<MovieRating> movieRatings;
 
-
-		public void LoadData()
-		{
-		}
 
 		public IEnumerable<MovieRating> GetData()
 		{

@@ -20,7 +20,7 @@ namespace MovieRatings.Tests.FakeRepositories
 			return _movieRatings.Where(mr => mr.Movie == movie).Count();
 		}
 
-		public int GetReviewsByReviewer(int reviewer)
+		public int GetCountOfReviewsByReviewer(int reviewer)
 		{
 			return _movieRatings.Where(mr => mr.Reviewer == reviewer).Count();
 		}
@@ -57,7 +57,7 @@ namespace MovieRatings.Tests.FakeRepositories
 
 		public IEnumerable<int> GetTopMovies(int number)
 		{
-			return _movieRatings.OrderByDescending(mr => AverageRatingOnMovie(mr.Grade)).Select(mr => mr.Movie).Distinct().Take(number);
+			return _movieRatings.OrderByDescending(mr => mr.Grade).Select(mr => mr.Movie).Distinct().Take(number);
 		}
 
 		public IEnumerable<MovieRating> GetMoviesByReviewer(int reviewer)

@@ -5,12 +5,12 @@ namespace MovieRatings.Core.ApplicationService
 {
     public interface IMovieRatingService
     {
-        int GetReviewsByReviewer(int reviewer);
-        double AverageRatingByReviewer(int reviewer);
-        int GetCountOfGradesByReviewer(int reviewer, int grade);
-        int GetCountOfMovieReviews(int movie);
+		int GetCountOfMovieReviews(int movie);
+		int GetCountOfReviewsByReviewer(int reviewer);
+		int GetCountOfMovieByGrade(int movie, int grade);
+		int GetCountOfGradesByReviewer(int reviewer, int grade);
+		double AverageRatingByReviewer(int reviewer);
         double AverageRatingOnMovie(int movie);
-        int GetCountOfMovieByGrade(int movie, int grade);
         List<int> GetTopGradedMovies();
         List<int> GetTopReviewers();
         List<int> GetTopMovies(int number);
